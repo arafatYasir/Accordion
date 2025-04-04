@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana;
+}
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.accordian-heading {
+  background: #ddd;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordian-heading h2 {
+  font-size: 20px;
+}
+
+.accordian-heading button {
+  border: 0;
+  background: #ddd;
+  font-size: 28px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.accordian-body {
+  background: #c7c7c7;
+  padding: 0 10px;
+  font-size: 18px;
+  transition: 0.3s all;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordian-body.open {
+  max-height: fit-content;
+  padding: 10px;
+}
+
+.accordian-heading button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 575px) {
+  .accordian-heading h2 {
+    font-size: 14px;
+  }
+
+  .accordian-heading button {
+    font-size: 24px;
+  }
+}
